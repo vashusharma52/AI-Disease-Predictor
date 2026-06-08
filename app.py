@@ -11,41 +11,206 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* Multiselect dropdown text */
-.stMultiSelect [data-baseweb="select"] * {
-    color: black !important;
+/* =========================
+   MAIN BACKGROUND
+========================= */
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #0B1120 0%,
+        #172554 50%,
+        #1E293B 100%
+    );
+    color: #F8FAFC;
 }
 
-/* Dropdown menu */
-div[role="listbox"] {
-    background-color: white !important;
+/* =========================
+   TITLE
+========================= */
+.main-title {
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(
+        90deg,
+        #00E5FF,
+        #00FF99
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 
-/* Dropdown options */
-div[role="option"] {
-    color: black !important;
-    background-color: white !important;
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+    text-align: center;
+    color: #CBD5E1;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-/* Hover effect */
-div[role="option"]:hover {
-    background-color: #e5e7eb !important;
-    color: black !important;
+/* =========================
+   GLASS CARD
+========================= */
+.glass {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
-/* Selected tags */
+/* =========================
+   SECTION HEADINGS
+========================= */
+h1,h2,h3,h4,h5,h6 {
+    color: #F8FAFC !important;
+}
+
+/* =========================
+   TEXT
+========================= */
+p, label, span, div {
+    color: #F1F5F9;
+}
+
+/* =========================
+   INPUT BOXES
+========================= */
+.stTextInput input,
+.stNumberInput input,
+textarea {
+    background: rgba(255,255,255,0.08) !important;
+    color: white !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+}
+
+/* =========================
+   MULTISELECT
+========================= */
+.stMultiSelect [data-baseweb="select"] {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+}
+
+/* Selected Tags */
 .stMultiSelect span {
     color: white !important;
 }
 
-/* Search box text */
-.stMultiSelect input {
+/* Dropdown */
+[data-baseweb="popover"] {
+    background: white !important;
+    border-radius: 10px !important;
+}
+
+[data-baseweb="menu"] {
+    background: white !important;
+}
+
+[data-baseweb="menu"] * {
     color: black !important;
 }
 
-/* Placeholder text */
-.stMultiSelect input::placeholder {
-    color: #555 !important;
+/* =========================
+   BUTTON
+========================= */
+.stButton > button {
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        #00E5FF,
+        #00FF99
+    );
+    color: #0F172A !important;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 20px rgba(0,255,153,0.4);
+}
+
+/* =========================
+   RESULT CARD
+========================= */
+.result-card {
+    background: linear-gradient(
+        135deg,
+        rgba(0,255,153,0.15),
+        rgba(0,229,255,0.12)
+    );
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,255,153,0.3);
+    margin-top: 25px;
+    box-shadow: 0 0 25px rgba(0,255,153,0.15);
+}
+
+/* Disease Name */
+.prediction {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00FF99;
+}
+
+/* Confidence */
+.confidence {
+    color: #38BDF8;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+section[data-testid="stSidebar"] {
+    background: #0F172A;
+    border-right: 1px solid #1E293B;
+}
+
+/* =========================
+   METRIC BOXES
+========================= */
+[data-testid="metric-container"] {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    text-align: center;
+    color: #94A3B8;
+    margin-top: 40px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00E5FF;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E293B;
 }
 
 </style>
