@@ -176,16 +176,32 @@ div[role="option"]:hover {
     box-shadow: 0 0 25px rgba(0,255,153,0.15);
 }
 
+/* Disease Name */
 .prediction {
     font-size: 32px;
     font-weight: bold;
-    color: #00FF99;
+    color: #00FF99 !important;
 }
 
-.confidence {
-    color: #FFFFFF !important ;
-    font-size: 18px;
-    font-weight: 600;
+/* Confidence Text */
+.confidence,
+.confidence p,
+.confidence span,
+.confidence div {
+    color: #FFFFFF !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* All Result Card Text */
+.result-card p,
+.result-card span,
+.result-card div,
+.result-card h1,
+.result-card h2,
+.result-card h3,
+.result-card h4 {
+    color: #FFFFFF !important;
 }
 
 /* =========================
