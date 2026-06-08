@@ -10,6 +10,7 @@ st.set_page_config(
 )
 st.markdown("""
     
+
 /* =========================
    MAIN BACKGROUND
 ========================= */
@@ -187,7 +188,7 @@ div[role="option"]:hover {
 .confidence p,
 .confidence span,
 .confidence div {
-    color: #EF4444 !important;
+    color: #FFFFFF !important;
     font-size: 22px;
     font-weight: bold;
 }
