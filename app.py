@@ -9,29 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 st.markdown("""
-<style>
-
-     <div class="result-card">
     
-    <div style="
-        font-size:42px;
-        font-weight:800;
-        color:#FFFFFF;
-        margin-bottom:20px;
-    ">
-        🧬 Predicted Disease: {predicted_disease}
-    </div>
-
-    <div style="
-        font-size:28px;
-        font-weight:700;
-        color:#FFFFFF;
-    ">
-        Confidence: {confidence:.2f}%
-    </div>
-
-</div>       
-
 /* =========================
    MAIN BACKGROUND
 ========================= */
@@ -209,7 +187,7 @@ div[role="option"]:hover {
 .confidence p,
 .confidence span,
 .confidence div {
-    color: #FFFFFF !important;
+    color: #EF4444 !important;
     font-size: 22px;
     font-weight: bold;
 }
