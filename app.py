@@ -8,67 +8,92 @@ st.set_page_config(
     page_icon="🩺",
     layout="wide"
 )
-
-# CSS
 st.markdown("""
 <style>
 
 .stApp{
-background: linear-gradient(
-135deg,
-#0f172a,
-#1e293b,
-#334155
-);
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
 }
 
+/* Main Title */
 .main-title{
-font-size:60px;
-font-weight:bold;
-text-align:center;
-background: linear-gradient(
-90deg,
-#00f5ff,
-#00ff88
-);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin-bottom:10px;
+    font-size:60px;
+    font-weight:bold;
+    text-align:center;
+    background: linear-gradient(
+        90deg,
+        #00f5ff,
+        #00ff88
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:10px;
 }
 
+/* Subtitle */
 .subtitle{
-text-align:center;
-color:white;
-font-size:20px;
-margin-bottom:30px;
+    text-align:center;
+    color:#f8fafc;   /* brighter white */
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:30px;
 }
 
+/* Glass Container */
 .glass{
-background: rgba(255,255,255,0.1);
-backdrop-filter: blur(12px);
-padding:25px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.25);
+    color:#ffffff;   /* all text inside becomes white */
 }
 
+/* Labels & General Text */
+label, p, div, span{
+    color:#f8fafc !important;
+}
+
+/* Input Fields */
+.stTextInput input,
+.stNumberInput input,
+.stSelectbox div[data-baseweb="select"]{
+    background-color: rgba(255,255,255,0.1) !important;
+    color: white !important;
+}
+
+/* Result Card */
 .result-card{
-background: rgba(0,255,150,0.15);
-padding:20px;
-border-radius:20px;
-margin-top:20px;
-border:1px solid rgba(0,255,150,0.4);
+    background: rgba(0,255,150,0.15);
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+    border:1px solid rgba(0,255,150,0.4);
+    color:white;
 }
 
+/* Prediction Text */
 .prediction{
-font-size:30px;
-font-weight:bold;
-color:#00ff88;
+    font-size:30px;
+    font-weight:bold;
+    color:#00ff88;
 }
 
+/* Footer */
 .footer{
-text-align:center;
-margin-top:40px;
-color:white;
+    text-align:center;
+    margin-top:40px;
+    color:#e2e8f0;
+}
+
+/* Streamlit Markdown Text */
+.stMarkdown{
+    color:#ffffff !important;
 }
 
 </style>
