@@ -21,7 +21,6 @@ st.markdown("""
         #172554 50%,
         #1E293B 100%
     );
-    color: #F8FAFC;
 }
 
 /* =========================
@@ -64,17 +63,11 @@ st.markdown("""
 }
 
 /* =========================
-   SECTION HEADINGS
+   TEXT COLORS
 ========================= */
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,
+p,label,span {
     color: #F8FAFC !important;
-}
-
-/* =========================
-   TEXT
-========================= */
-p, label, span, div {
-    color: #F1F5F9;
 }
 
 /* =========================
@@ -90,30 +83,57 @@ textarea {
 }
 
 /* =========================
-   MULTISELECT
+   MULTISELECT BOX
 ========================= */
 .stMultiSelect [data-baseweb="select"] {
     background: rgba(255,255,255,0.08);
     border-radius: 12px;
 }
 
-/* Selected Tags */
+/* Selected symptom tags */
 .stMultiSelect span {
     color: white !important;
 }
 
-/* Dropdown */
-[data-baseweb="popover"] {
+/* =========================
+   DROPDOWN FIX
+========================= */
+
+/* Dropdown background */
+div[role="listbox"] {
     background: white !important;
-    border-radius: 10px !important;
 }
 
-[data-baseweb="menu"] {
-    background: white !important;
-}
-
-[data-baseweb="menu"] * {
+/* Symptom names */
+div[role="option"] {
     color: black !important;
+    background: white !important;
+}
+
+/* All text inside options */
+div[role="option"] * {
+    color: black !important;
+}
+
+/* Select All */
+div[role="listbox"] * {
+    color: black !important;
+}
+
+/* Hover effect */
+div[role="option"]:hover {
+    background: #E5E7EB !important;
+    color: black !important;
+}
+
+/* Search text */
+.stMultiSelect input {
+    color: black !important;
+}
+
+/* Placeholder */
+.stMultiSelect input::placeholder {
+    color: #6B7280 !important;
 }
 
 /* =========================
@@ -156,14 +176,12 @@ textarea {
     box-shadow: 0 0 25px rgba(0,255,153,0.15);
 }
 
-/* Disease Name */
 .prediction {
     font-size: 32px;
     font-weight: bold;
     color: #00FF99;
 }
 
-/* Confidence */
 .confidence {
     color: #38BDF8;
     font-size: 18px;
@@ -175,17 +193,6 @@ textarea {
 ========================= */
 section[data-testid="stSidebar"] {
     background: #0F172A;
-    border-right: 1px solid #1E293B;
-}
-
-/* =========================
-   METRIC BOXES
-========================= */
-[data-testid="metric-container"] {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 15px;
-    border-radius: 15px;
 }
 
 /* =========================
@@ -195,22 +202,6 @@ section[data-testid="stSidebar"] {
     text-align: center;
     color: #94A3B8;
     margin-top: 40px;
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #00E5FF;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1E293B;
 }
 
 </style>
