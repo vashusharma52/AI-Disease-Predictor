@@ -183,7 +183,7 @@ div[role="option"]:hover {
 }
 
 .confidence {
-    color: #FFFFFF;
+    color: #FFFFFF !important ;
     font-size: 18px;
     font-weight: 600;
 }
